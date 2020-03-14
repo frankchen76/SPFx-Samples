@@ -1,0 +1,17 @@
+{
+  "@odata.context": "https://test.com/api/$metadata",
+  "value": [
+    {
+      "id": 1,
+      "name": "apple",
+      "amount": 3.19,
+      "productType": "Fruit"
+    },
+    {
+      "id": 1,
+      "name": "apple",
+      "amount": 3.19,
+      "productType": "Fruit"
+    }
+  ]
+}

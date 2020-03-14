@@ -1,0 +1,12 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "sp-2019-sample-wp-client-side-solution",
+    "id": "2f4661fb-2a4a-455f-af9c-10cdc9a3f442",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true
+  },
+  "paths": {
+    "zippedPackage": "solution/sp-2019-sample-wp.sppkg"
+  }
+}

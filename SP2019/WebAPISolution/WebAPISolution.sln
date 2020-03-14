@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29905.134
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ASPCore3.NTLMWebAPI", "ASPCore3.NTLMWebAPI\ASPCore3.NTLMWebAPI.csproj", "{823DE3FE-6A65-45E2-9B3C-F82F4ACBFCEF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{497331FA-B414-44B1-8523-A5230961A245}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{823DE3FE-6A65-45E2-9B3C-F82F4ACBFCEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{823DE3FE-6A65-45E2-9B3C-F82F4ACBFCEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{823DE3FE-6A65-45E2-9B3C-F82F4ACBFCEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{823DE3FE-6A65-45E2-9B3C-F82F4ACBFCEF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AC74B2A5-0037-4FE6-8004-F3AA348209CF}
+	EndGlobalSection
+EndGlobal
