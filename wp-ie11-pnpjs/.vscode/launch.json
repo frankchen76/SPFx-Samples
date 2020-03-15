@@ -1,0 +1,67 @@
+{
+    /**
+     * Install Chrome Debugger Extension for Visual Studio Code to debug your components with the
+     * Chrome browser: https://aka.ms/spfx-debugger-extensions
+     */
+    "version": "0.2.0",
+    "configurations": [
+
+
+        {
+            "name": "Local workbench",
+            "type": "chrome",
+            "request": "launch",
+            "url": "https://localhost:4321/temp/workbench.html",
+            "webRoot": "${workspaceRoot}",
+            "sourceMaps": true,
+            "sourceMapPathOverrides": {
+                "webpack:///.././src/*": "${webRoot}/src/*",
+                "webpack:///../../../src/*": "${webRoot}/src/*",
+                "webpack:///../../../../src/*": "${webRoot}/src/*",
+                "webpack:///../../../../../src/*": "${webRoot}/src/*"
+            },
+            "runtimeArgs": [
+                "--remote-debugging-port=9222"
+            ]
+        },
+        {
+            "name": "SPO Hosted workbench",
+            "type": "chrome",
+            "request": "launch",
+            "url": "https://m365x725618.sharepoint.com/sites/FrankTeam1/_layouts/workbench.aspx",
+            "webRoot": "${workspaceRoot}",
+            "sourceMaps": true,
+            "sourceMapPathOverrides": {
+                "webpack:///.././src/*": "${webRoot}/src/*",
+                "webpack:///../../../src/*": "${webRoot}/src/*",
+                "webpack:///../../../../src/*": "${webRoot}/src/*",
+                "webpack:///../../../../../src/*": "${webRoot}/src/*"
+            },
+            "runtimeArgs": [
+                "--remote-debugging-port=9222",
+                "--harmony",
+                "--incognito",
+                "--load-extension=${env:userprofile}/AppData/Local/Google/Chrome/User Data/Default/Extensions/hdokiejnpimakedhajhdlcegeplioahd/4.43.0.7_0"
+            ]
+        },
+        {
+            "name": "Launch localhost in Microsoft Edge (Chromium) Canary",
+            "type": "edge",
+            "request": "launch",
+            "version": "stable",
+            "url": "https://m365x725618.sharepoint.com/sites/FrankTeam1/_layouts/workbench.aspx",
+            "webRoot": "${workspaceFolder}",
+            "sourceMaps": true,
+            "sourceMapPathOverrides": {
+                "webpack:///.././src/*": "${webRoot}/src/*",
+                "webpack:///../../../src/*": "${webRoot}/src/*",
+                "webpack:///../../../../src/*": "${webRoot}/src/*",
+                "webpack:///../../../../../src/*": "${webRoot}/src/*"
+            },
+            "runtimeArgs": [
+                "--remote-debugging-port=2015",
+                "-incognito"
+            ]
+        }
+    ]
+}
