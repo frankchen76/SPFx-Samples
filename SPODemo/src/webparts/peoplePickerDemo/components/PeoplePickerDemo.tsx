@@ -8,7 +8,8 @@ import { IBasePickerSuggestionsProps, NormalPeoplePicker, ValidationState } from
 import { cloneDeep } from '@microsoft/sp-lodash-subset';
 import { people, mru } from '@uifabric/example-data';
 import { IPeoplePickerDemoState } from './IPeoplePickerDemoState';
-import { autobind } from 'office-ui-fabric-react';
+import { autobind, PrimaryButton } from 'office-ui-fabric-react';
+import { Dialog } from '@microsoft/sp-dialog';
 
 export default class PeoplePickerDemo extends React.Component<IPeoplePickerDemoProps, IPeoplePickerDemoState> {
   private suggestionProps: IBasePickerSuggestionsProps = {
@@ -80,6 +81,13 @@ export default class PeoplePickerDemo extends React.Component<IPeoplePickerDemoP
     return input;
   }
 
+
+  @autobind
+  private _showResultHandler(): void {
+    const msg = this.state.currentSelectedPeoples ? this.state.currentSelectedPeoples.map(p => p.text).join(',') : '<No selection>';
+    Dialog.alert(msg);
+  }
+
   public render(): React.ReactElement<IPeoplePickerDemoProps> {
     return (
       <div className={styles.peoplePickerDemo}>
@@ -103,6 +111,11 @@ export default class PeoplePickerDemo extends React.Component<IPeoplePickerDemoP
                 }}
                 onInputChange={this._onInputChange}
               />
+            </div>
+          </div>
+          <div className={styles.row}>
+            <div className={styles.column}>
+              <PrimaryButton text="Show Result" onClick={this._showResultHandler} />
             </div>
           </div>
         </div>
