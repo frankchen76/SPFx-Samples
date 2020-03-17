@@ -22,7 +22,7 @@
       ]
     },
     {
-      "name": "Hosted workbench",
+      "name": "Hosted workbench[Chrome]",
       "type": "chrome",
       "request": "launch",
       "url": "https://m365x725618.sharepoint.com/sites/FrankTeam1/_layouts/workbench.aspx",
@@ -40,6 +40,28 @@
         "--incognito",
         "--load-extension=${env:userprofile}/AppData/Local/Google/Chrome/User Data/Default/Extensions/hdokiejnpimakedhajhdlcegeplioahd/4.43.0.7_0"
       ]
+    },
+    {
+      "name": "Hosted workbench[Edge]",
+      "type": "edge",
+      "version": "stable",
+      "request": "launch",
+      "url": "https://m365x725618.sharepoint.com/sites/FrankTeam1/_layouts/workbench.aspx",
+      "webRoot": "${workspaceRoot}",
+      "sourceMaps": true,
+      "sourceMapPathOverrides": {
+        "webpack:///.././src/*": "${webRoot}/src/*",
+        "webpack:///../../../src/*": "${webRoot}/src/*",
+        "webpack:///../../../../src/*": "${webRoot}/src/*",
+        "webpack:///../../../../../src/*": "${webRoot}/src/*"
+      },
+      "runtimeArgs": [
+        "--remote-debugging-port=2015",
+        "--harmony",
+        "--incognito",
+        "--load-extension=${env:userprofile}/AppData/Local/Google/Chrome/User Data/Default/Extensions/hdokiejnpimakedhajhdlcegeplioahd/4.43.0.7_0"
+      ]
     }
+
   ]
 }
