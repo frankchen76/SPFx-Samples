@@ -7,27 +7,23 @@ import {
 } from '@microsoft/sp-property-pane';
 import { BaseClientSideWebPart } from '@microsoft/sp-webpart-base';
 
-import * as strings from 'PeoplePickerDemoWebPartStrings';
-import PeoplePickerDemo from './components/PeoplePickerDemo';
-import { IPeoplePickerDemoProps } from './components/IPeoplePickerDemoProps';
+import * as strings from 'SinglePartDemoWebPartStrings';
+import SinglePartDemo from './components/SinglePartDemo';
+import { ISinglePartDemoProps } from './components/ISinglePartDemoProps';
 
 import "reflect-metadata";
 import { sp } from '@pnp/sp/presets/all';
-import { graph } from "@pnp/graph";
 import { mainContainer } from "../../services";
 
-export interface IPeoplePickerDemoWebPartProps {
-  description: string;
+export interface ISinglePartDemoWebPartProps {
+  listTitle: string;
 }
 
-export default class PeoplePickerDemoWebPart extends BaseClientSideWebPart<IPeoplePickerDemoWebPartProps> {
+export default class SinglePartDemoWebPart extends BaseClientSideWebPart<ISinglePartDemoWebPartProps> {
 
   protected async onInit(): Promise<void> {
     return super.onInit().then(_ => {
       sp.setup({
-        spfxContext: this.context
-      });
-      graph.setup({
         spfxContext: this.context
       });
 
@@ -37,14 +33,15 @@ export default class PeoplePickerDemoWebPart extends BaseClientSideWebPart<IPeop
     // // other init code may be present
     // //init spfx-di
     // mainContainer.registerWebPartContext(this.context);
+
     // sp.setup(this.context);
   }
 
   public render(): void {
-    const element: React.ReactElement<IPeoplePickerDemoProps> = React.createElement(
-      PeoplePickerDemo,
+    const element: React.ReactElement<ISinglePartDemoProps> = React.createElement(
+      SinglePartDemo,
       {
-        description: this.properties.description
+        listTitle: this.properties.listTitle
       }
     );
 
@@ -70,8 +67,8 @@ export default class PeoplePickerDemoWebPart extends BaseClientSideWebPart<IPeop
             {
               groupName: strings.BasicGroupName,
               groupFields: [
-                PropertyPaneTextField('description', {
-                  label: strings.DescriptionFieldLabel
+                PropertyPaneTextField('listTitle', {
+                  label: strings.ListTitleFieldLabel
                 })
               ]
             }

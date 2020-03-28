@@ -11,7 +11,19 @@ import { IPeoplePickerDemoState } from './IPeoplePickerDemoState';
 import { autobind, PrimaryButton } from 'office-ui-fabric-react';
 import { Dialog } from '@microsoft/sp-dialog';
 
+import "reflect-metadata";
+import { IUserService, mainContainer, TYPES } from '../../../services';
+import { PropertyInject, InjectAutoInit } from '@ezcode/spfx-di/lib';
+
+@InjectAutoInit
 export default class PeoplePickerDemo extends React.Component<IPeoplePickerDemoProps, IPeoplePickerDemoState> {
+
+  @PropertyInject({
+    typeKey: TYPES.GraphUserService,
+    container: mainContainer.Container
+  })
+  private _userService: IUserService;
+
   private suggestionProps: IBasePickerSuggestionsProps = {
     suggestionsHeaderText: 'Suggested People',
     mostRecentlyUsedHeaderText: 'Suggested Contacts',
@@ -56,11 +68,25 @@ export default class PeoplePickerDemo extends React.Component<IPeoplePickerDemoP
   private _returnMostRecentlyUsed(currentPersonas: IPersonaProps[]): IPersonaProps[] | Promise<IPersonaProps[]> {
     // let { mostRecentlyUsed } = this.state;
     // mostRecentlyUsed = this._removeDuplicates(mostRecentlyUsed, currentPersonas);
-    let ret = new Array<IPersonaProps>();
-    for (let i = 0; i < 5; i++) {
-      ret.push(this.state.peopleList[i]);
-    }
-    return ret;
+    // return new Promise(resolve => {
+    //   setTimeout(() => {
+    //     let ret = new Array<IPersonaProps>();
+    //     for (let i = 0; i < 5; i++) {
+    //       ret.push(this.state.peopleList[i]);
+    //     }
+    //     resolve(ret);
+
+    //   }, 2000);
+    // });
+    return this._userService.getSuggestedUsers().then(userItems => {
+      return userItems.map(u => {
+        return {
+          text: u.displayName,
+          secondaryText: u.jobTitle,
+          imageUrl: u.photo
+        };
+      });
+    });
   }
 
   @autobind
@@ -86,6 +112,33 @@ export default class PeoplePickerDemo extends React.Component<IPeoplePickerDemoP
   private _showResultHandler(): void {
     const msg = this.state.currentSelectedPeoples ? this.state.currentSelectedPeoples.map(p => p.text).join(',') : '<No selection>';
     Dialog.alert(msg);
+  }
+  @autobind
+  private async _testHandler() {
+    try {
+      const base64 = await this._getPhoto();
+      console.log(base64);
+    } catch (error) {
+      console.log(error);
+    }
+
+    // console.log(blob.toString('base64'));
+    // console.log(blob);
+  }
+  private async _getPhoto(): Promise<string> {
+    return new Promise<string>((resolve, reject) => {
+      this._userService.webPartContext.msGraphClientFactory.getClient().then(graphClient => {
+        const url = '/users/e39c9514-6150-4f8f-94a8-bf39e65aee56-/photos/48x48/$value';
+        return graphClient.api(url).responseType('blob').get();
+      }).then(blob => {
+        var reader = new FileReader();
+        reader.onloadend = (): void => {
+          resolve(reader.result.toString());
+          //console.log(base64data);
+        };
+        reader.readAsDataURL(blob);
+      }).catch(error => { reject(error); });
+    });
   }
 
   public render(): React.ReactElement<IPeoplePickerDemoProps> {
@@ -116,6 +169,7 @@ export default class PeoplePickerDemo extends React.Component<IPeoplePickerDemoP
           <div className={styles.row}>
             <div className={styles.column}>
               <PrimaryButton text="Show Result" onClick={this._showResultHandler} />
+              <PrimaryButton text="Test" onClick={this._testHandler} />
             </div>
           </div>
         </div>
