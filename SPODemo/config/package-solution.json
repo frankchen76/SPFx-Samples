@@ -9,7 +9,11 @@
     "webApiPermissionRequests": [
       {
         "resource": "Microsoft Graph",
-        "scope": "Group.ReadWrite.All,User.Read.All"
+        "scope": "Group.ReadWrite.All"
+      },
+      {
+        "resource": "Microsoft Graph",
+        "scope": "User.Read.All"
       }
     ]
   },
