@@ -11,11 +11,23 @@ import * as strings from 'Sp2019SampleWebPartStrings';
 import Sp2019Sample from './components/Sp2019Sample';
 import { ISp2019SampleProps } from './components/ISp2019SampleProps';
 
+import { setup as pnpSetup } from "@pnp/common";
+import { sp } from "@pnp/sp";
+
 export interface ISp2019SampleWebPartProps {
   description: string;
 }
 
 export default class Sp2019SampleWebPart extends BaseClientSideWebPart<ISp2019SampleWebPartProps> {
+
+  protected onInit(): Promise<void> {
+    return super.onInit().then(_ => {
+      // other init code may be present
+      pnpSetup({
+        spfxContext: this.context
+      });
+    });
+  }
 
   public render(): void {
     const element: React.ReactElement<ISp2019SampleProps> = React.createElement(

@@ -6,6 +6,9 @@ import { PrimaryButton, autobind, Spinner, SpinnerSize } from 'office-ui-fabric-
 import { HttpClient, SPHttpClient, IHttpClientOptions } from '@microsoft/sp-http';
 import { ISp2019SampleState } from './ISp2019SampleState';
 
+import "@pnp/polyfill-ie11";
+import { sp } from "@pnp/sp";
+
 export default class Sp2019Sample extends React.Component<ISp2019SampleProps, ISp2019SampleState> {
   private _id: number;
 
@@ -15,6 +18,15 @@ export default class Sp2019Sample extends React.Component<ISp2019SampleProps, IS
       loading: false,
       result: undefined
     };
+  }
+
+  @autobind
+  private _testpnpjsHanlder(): void {
+    sp.web.select("Title").get().then(w => {
+      alert(w.Title);
+      console.log(`Web Title: ${w.Title}`);
+    });
+
   }
 
   @autobind
@@ -49,7 +61,8 @@ export default class Sp2019Sample extends React.Component<ISp2019SampleProps, IS
               <span className={styles.title}>Welcome to SharePoint!</span>
               <p className={styles.subTitle}>Customize SharePoint experiences using Web Parts.</p>
               <p className={styles.description}>{escape(this.props.description)}</p>
-              <PrimaryButton text='test' onClick={this._testHanlder} />
+              <PrimaryButton text='Test Service (NTLM)' onClick={this._testHanlder} />
+              <PrimaryButton text='Test PnPJS' onClick={this._testpnpjsHanlder} />
               {this.state.loading &&
                 <Spinner size={SpinnerSize.large} label='loading...' />
               }

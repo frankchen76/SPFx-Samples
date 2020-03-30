@@ -3,6 +3,8 @@
 This is a sample of SP2019 web part and demonstrated calling Integrated Windows Authentication Web API from SPFx
 
 * pnp js v1.6.3
+* polyfill which make PnP JS working for IE11.
+* tslint override
 
 ### Building the code
 
