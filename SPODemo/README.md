@@ -3,7 +3,9 @@
 This is where you include your WebPart documentation.
 
 ## components
-* 
+* @ezcode/spfx-di
+* @pnp/graph v2.0.3
+* @pnp/sp v2.0.3
 
 ## Solutions
 | Folder                        | Type     | Description                                                                                                                                                                                                                                                                                                                                                      |
