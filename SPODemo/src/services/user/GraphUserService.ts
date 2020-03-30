@@ -13,10 +13,18 @@ import { IUser } from "@pnp/graph/users";
 @injectable()
 export class GraphUserService implements IUserService {
   public webPartContext: WebPartContext;
+  private _preloadCount = 5;
+  private _preloadUsers: IUserItem[];
 
-  public async getSuggestedUsers(): Promise<IUserItem[]> {
+  public async getSuggestedUsers(preloadCount?: number): Promise<IUserItem[]> {
+    if (!this._preloadUsers) {
+      this._preloadUsers = await this._preloadSuggestedUsers(preloadCount);
+    }
+    return new Promise<IUserItem[]>(resolve => resolve(this._preloadUsers));
+  }
+  public async _preloadSuggestedUsers(preloadCount?: number): Promise<IUserItem[]> {
     const graphClient = await this.webPartContext.msGraphClientFactory.getClient();
-    const url = '/users?$top=5';
+    const url = `/users?$include=id,displayName,jobTitle&$top=${preloadCount ? preloadCount : this._preloadCount}`;
 
     const responseGraphUsers = await graphClient.api(url).get();
 
@@ -59,8 +67,32 @@ export class GraphUserService implements IUserService {
         .catch(error => { reject(error); });
     });
   }
-  public findUsers(searchText: string): Promise<IUserItem[]> {
-    throw Error("not implemented");
+  public async findUsers(searchText: string, preloadCount?: number): Promise<IUserItem[]> {
+    const graphClient = await this.webPartContext.msGraphClientFactory.getClient();
+    const url = `/users?$include=id,displayName,jobTitle&$top=${preloadCount ? preloadCount : this._preloadCount}&$filter=startswith(displayName,'${searchText}')`;
+
+    const responseGraphUsers = await graphClient.api(url).get();
+
+    // const graphUsers = await graphClient.api(url).get((error, response: any, rawResponse?: any) => {
+    //   return response.value;
+    // });
+    let ret = new Array<IUserItem>();
+    for (let graphUser of responseGraphUsers.value) {
+      let userItem: IUserItem = {
+        id: graphUser['id'],
+        displayName: graphUser['displayName'],
+        jobTitle: graphUser['jobTitle'],
+        photo: ''
+      };
+      try {
+        userItem.photo = await this._getPhoto(graphClient, userItem.id);
+      } catch (error) {
+        userItem.photo = '';
+        console.log(error);
+      }
+      ret.push(userItem);
+    }
+    return ret;
   }
 
 }

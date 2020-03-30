@@ -49,6 +49,7 @@
       "url": "https://m365x725618.sharepoint.com/sites/FrankTeam1/_layouts/workbench.aspx",
       "webRoot": "${workspaceRoot}",
       "sourceMaps": true,
+      "port": 2015,
       "sourceMapPathOverrides": {
         "webpack:///.././src/*": "${webRoot}/src/*",
         "webpack:///../../../src/*": "${webRoot}/src/*",

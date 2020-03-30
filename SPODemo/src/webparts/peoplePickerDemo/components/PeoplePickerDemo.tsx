@@ -40,7 +40,7 @@ export default class PeoplePickerDemo extends React.Component<IPeoplePickerDemoP
     peopleData.forEach(p => p['primaryText'] = p['text']);
     this.state = {
       currentSelectedPeoples: null,
-      peopleList: peopleData
+      peopleList: undefined
     };
 
   }
@@ -48,9 +48,18 @@ export default class PeoplePickerDemo extends React.Component<IPeoplePickerDemoP
   @autobind
   private _onFilterChanged(filterText: string, currentPersonas: IPersonaProps[], limitResults?: number): IPersonaProps[] | Promise<IPersonaProps[]> {
     if (filterText) {
-      let filteredPersonas: IPersonaProps[] = this._filterPersonasByText(filterText);
+      //let filteredPersonas: IPersonaProps[] = this._filterPersonasByText(filterText);
+      return this._userService.findUsers(filterText).then(userItems => {
+        return userItems.map(u => {
+          return {
+            text: u.displayName,
+            secondaryText: u.jobTitle,
+            imageUrl: u.photo
+          };
+        });
+      });
 
-      return filteredPersonas;
+      // return filteredPersonas;
     } else {
       return [];
     }
