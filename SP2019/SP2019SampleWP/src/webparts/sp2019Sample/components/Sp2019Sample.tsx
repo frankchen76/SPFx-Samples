@@ -21,6 +21,18 @@ export default class Sp2019Sample extends React.Component<ISp2019SampleProps, IS
   }
 
   @autobind
+  private _promiseTestHandler(): void {
+    const test = new Promise<string>(resolve => {
+      setTimeout(() => {
+        resolve('timer is done.');
+      }, 2000);
+    });
+    test.then(result => {
+      alert(result);
+    });
+  }
+
+  @autobind
   private _testpnpjsHanlder(): void {
     sp.web.select("Title").get().then(w => {
       alert(w.Title);
@@ -31,6 +43,7 @@ export default class Sp2019Sample extends React.Component<ISp2019SampleProps, IS
 
   @autobind
   private _testHanlder(): void {
+
     const url = 'https://localhost:44357/weatherforecast';
     //IHttpClientOptions
     this.setState({ loading: true });
@@ -63,6 +76,7 @@ export default class Sp2019Sample extends React.Component<ISp2019SampleProps, IS
               <p className={styles.description}>{escape(this.props.description)}</p>
               <PrimaryButton text='Test Service (NTLM)' onClick={this._testHanlder} />
               <PrimaryButton text='Test PnPJS' onClick={this._testpnpjsHanlder} />
+              <PrimaryButton text='Test Promise' onClick={this._promiseTestHandler} />
               {this.state.loading &&
                 <Spinner size={SpinnerSize.large} label='loading...' />
               }
