@@ -1,0 +1,46 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "location-source-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/locationSource/LocationSourceWebPart.js",
+          "manifest": "./src/webparts/locationSource/LocationSourceWebPart.manifest.json"
+        }
+      ]
+    },
+    "sp-fx-customizer-application-customizer": {
+      "components": [
+        {
+          "entrypoint": "./lib/extensions/spFxCustomizer/SpFxCustomizerApplicationCustomizer.js",
+          "manifest": "./src/extensions/spFxCustomizer/SpFxCustomizerApplicationCustomizer.manifest.json"
+        }
+      ]
+    },
+    "location-hero-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/locationHero/LocationHeroWebPart.js",
+          "manifest": "./src/webparts/locationHero/LocationHeroWebPart.manifest.json"
+        }
+      ]
+    },
+    "commandset-extension-command-set": {
+      "components": [
+        {
+          "entrypoint": "./lib/extensions/commandsetExtension/CommandsetExtensionCommandSet.js",
+          "manifest": "./src/extensions/commandsetExtension/CommandsetExtensionCommandSet.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "HeroWebPartStrings": "lib/webparts/hero/loc/{locale}.js",
+    "LocationSourceWebPartStrings": "lib/webparts/locationSource/loc/{locale}.js",
+    "SpFxCustomizerApplicationCustomizerStrings": "lib/extensions/spFxCustomizer/loc/{locale}.js",
+    "LocationHeroWebPartStrings": "lib/webparts/locationHero/loc/{locale}.js",
+    "CommandsetExtensionCommandSetStrings": "lib/extensions/commandsetExtension/loc/{locale}.js"
+  }
+}
