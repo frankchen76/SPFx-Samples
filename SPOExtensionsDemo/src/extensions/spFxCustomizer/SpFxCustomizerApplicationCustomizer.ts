@@ -16,13 +16,11 @@ import { autobind } from 'office-ui-fabric-react';
 import { IHeaderProps } from './components/IHeaderProps';
 // import { Header } from './components/Header';
 import SPFxHeader from './components/Header';
-import {
-  ILocationMsg,
-  ICommandMsg,
-  CommandMsgPublisher,
-  SingleMessageSubscriber,
-  LocationMsgPublisher
-} from '../../services';
+import { ILocationMsg } from '../../services/dynamicProperty/ILocationMsg';
+import { ICommandMsg } from '../../services/dynamicProperty/ICommandMsg';
+import { CommandMsgPublisher } from '../../services/dynamicProperty/CommandMsgPublisher';
+import { SingleMessageSubscriber } from '../../services/dynamicProperty/SingleMessageSubscriber';
+import { LocationMsgPublisher } from '../../services/dynamicProperty/LocationMsgPublisher';
 
 import { SelectLocationPanel, ISelectLocationPanelOption, PanelResultEnum } from '../../components';
 const LOG_SOURCE: string = 'SpFxCustomizerApplicationCustomizer';

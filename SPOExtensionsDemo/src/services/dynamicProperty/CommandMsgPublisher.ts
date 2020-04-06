@@ -2,7 +2,8 @@ import {
   IDynamicDataPropertyDefinition,
   IDynamicDataCallables
 } from '@microsoft/sp-dynamic-data';
-import { ICommandMsg, MessagePublisherBase } from '../';
+import { ICommandMsg } from './ICommandMsg';
+import { MessagePublisherBase } from './MessagePublisherBase';
 
 export class CommandMsgPublisher extends MessagePublisherBase<ICommandMsg> {
   public static COMMAND_MSG_ID = 'command';

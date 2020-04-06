@@ -2,7 +2,8 @@ import {
   IDynamicDataPropertyDefinition,
   IDynamicDataCallables
 } from '@microsoft/sp-dynamic-data';
-import { ILocationMsg, MessagePublisherBase } from '../';
+import { ILocationMsg } from './ILocationMsg';
+import { MessagePublisherBase } from './MessagePublisherBase';
 
 export class LocationMsgPublisher extends MessagePublisherBase<ILocationMsg> {
   public static LOCATION_MSG_ID = 'location';
