@@ -4,21 +4,23 @@ import { ISampleWpProps } from './ISampleWpProps';
 import { escape } from '@microsoft/sp-lodash-subset';
 import { PrimaryButton, autobind } from 'office-ui-fabric-react';
 import "@pnp/polyfill-ie11";
-import { sp } from "@pnp/sp";
+import { sp, Web } from "@pnp/sp";
 
 export default class SampleWp extends React.Component<ISampleWpProps, {}> {
     @autobind
-    private _testHandler() {
+    private _test1Handler() {
         alert('start');
         sp.web.select("Title").get().then(w => {
             alert(w.Title);
             console.log(`Web Title: ${w.Title}`);
         });
-        // sp.web.select("Title").then(w => {
-        //     alert(w.Title);
-        //     console.log(`Web Title: ${w.Title}`);
-        // });
-        //console.log("Test");
+    }
+    @autobind
+    private _test2Handler() {
+        let web = new Web("https://m365x725618.sharepoint.com/sites/FrankCommunication1");
+        web.get().then(result => {
+            alert(result.Title);
+        });
     }
 
     public render(): React.ReactElement<ISampleWpProps> {
@@ -33,7 +35,8 @@ export default class SampleWp extends React.Component<ISampleWpProps, {}> {
                     </div>
                     <div className={styles.row}>
                         <div className={styles.column}>
-                            <PrimaryButton text="Test" onClick={this._testHandler} />
+                            <PrimaryButton text="Test1" onClick={this._test1Handler} />
+                            <PrimaryButton text="Test2" onClick={this._test2Handler} />
                         </div>
                     </div>
                 </div>
