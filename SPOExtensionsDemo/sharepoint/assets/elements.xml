@@ -2,10 +2,16 @@
 <Elements xmlns="http://schemas.microsoft.com/sharepoint/">
     <CustomAction
         Title="SpFxCustomizer"
-        RegistrationId="101"
-        RegistrationType="List"
         Location="ClientSideExtension.ApplicationCustomizer"
         ClientSideComponentId="0c6626f9-6c11-4d8d-82ee-1be30f37f7fc"
         ClientSideComponentProperties="{&quot;testMessage&quot;:&quot;Test message&quot;}">
+    </CustomAction>
+    <CustomAction
+        Title="CommandsetExtension"
+        RegistrationId="101"
+        RegistrationType="List"
+        Location="ClientSideExtension.ListViewCommandSet.CommandBar"
+        ClientSideComponentId="355395b4-a9e6-4dcb-9f16-e50442452620"
+        ClientSideComponentProperties="{&quot;sampleTextOne&quot;:&quot;One item is selected in the list&quot;}">
     </CustomAction>
 </Elements>

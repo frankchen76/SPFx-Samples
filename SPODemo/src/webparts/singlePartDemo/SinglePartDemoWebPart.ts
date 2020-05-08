@@ -10,6 +10,7 @@ import { BaseClientSideWebPart } from '@microsoft/sp-webpart-base';
 import * as strings from 'SinglePartDemoWebPartStrings';
 import SinglePartDemo from './components/SinglePartDemo';
 import { ISinglePartDemoProps } from './components/ISinglePartDemoProps';
+import { TasksDemo } from './components/TasksDemo';
 
 import "reflect-metadata";
 import { sp } from '@pnp/sp/presets/all';
@@ -43,6 +44,10 @@ export default class SinglePartDemoWebPart extends BaseClientSideWebPart<ISingle
       {
         listTitle: this.properties.listTitle
       }
+      // TasksDemo,
+      // {
+      //   listTitle: this.properties.listTitle
+      // }
     );
 
     ReactDom.render(element, this.domElement);

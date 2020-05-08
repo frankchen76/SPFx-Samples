@@ -1,6 +1,16 @@
 @import '~office-ui-fabric-react/dist/sass/References.scss';
 
 .singlePartDemo {
+  .taskrow {
+    @include ms-Grid-row;
+
+  }
+
+  .tasktitle {
+    @include ms-Grid-col;
+    @include ms-lg12;
+  }
+
   .container {
     max-width: 700px;
     margin: 0px auto;

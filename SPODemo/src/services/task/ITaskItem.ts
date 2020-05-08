@@ -1,4 +1,6 @@
 export interface ITaskItem {
-  ID: string;
-  Title: string;
+  id: string;
+  title: string;
+  details: string;
+  dueDateTime: Date;
 }

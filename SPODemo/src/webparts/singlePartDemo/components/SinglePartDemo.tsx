@@ -27,15 +27,16 @@ export default class SinglePartDemo extends React.Component<ISinglePartDemoProps
   private _columns: IColumn[] = [
     {
       key: 'column1',
-      name: 'File Type',
+      name: 'id',
       //className: classNames.fileIconCell,
       //iconClassName: classNames.fileIconHeaderIcon,
       ariaLabel: 'Column operations for File type, Press to sort on File type',
       iconName: 'Page',
       isIconOnly: true,
-      fieldName: 'ID',
+      fieldName: 'id',
       minWidth: 16,
       maxWidth: 16,
+      isResizable: true,
       //onColumnClick: this._onColumnClick,
       // onRender: (item: IDocument) => {
       //   return <img src={item.iconName} className={classNames.fileIconImg} alt={item.fileType + ' file icon'} />;
@@ -43,8 +44,8 @@ export default class SinglePartDemo extends React.Component<ISinglePartDemoProps
     },
     {
       key: 'column2',
-      name: 'Name',
-      fieldName: 'Title',
+      name: 'title',
+      fieldName: 'title',
       minWidth: 210,
       maxWidth: 350,
       isRowHeader: true,
@@ -56,9 +57,75 @@ export default class SinglePartDemo extends React.Component<ISinglePartDemoProps
       // onColumnClick: this._onColumnClick,
       data: 'string',
       isPadded: true
+    },
+    {
+      key: 'column3',
+      name: 'details',
+      fieldName: 'details',
+      minWidth: 210,
+      maxWidth: 350,
+      isRowHeader: true,
+      isResizable: true,
+      isSorted: true,
+      isSortedDescending: false,
+      sortAscendingAriaLabel: 'Sorted A to Z',
+      sortDescendingAriaLabel: 'Sorted Z to A',
+      // onColumnClick: this._onColumnClick,
+      data: 'string',
+      isPadded: true
+    },
+    {
+      key: 'column4',
+      name: 'dueDateTime',
+      fieldName: 'dueDateTime',
+      minWidth: 210,
+      maxWidth: 350,
+      isRowHeader: true,
+      isResizable: true,
+      isSorted: true,
+      isSortedDescending: false,
+      sortAscendingAriaLabel: 'Sorted A to Z',
+      sortDescendingAriaLabel: 'Sorted Z to A',
+      // onColumnClick: this._onColumnClick,
+      data: 'Date',
+      isPadded: true
     }
   ];
 
+  // private _spColumns: IColumn[] = [
+  //   {
+  //     key: 'column1',
+  //     name: 'File Type',
+  //     //className: classNames.fileIconCell,
+  //     //iconClassName: classNames.fileIconHeaderIcon,
+  //     ariaLabel: 'Column operations for File type, Press to sort on File type',
+  //     iconName: 'Page',
+  //     isIconOnly: true,
+  //     fieldName: 'ID',
+  //     minWidth: 16,
+  //     maxWidth: 16,
+  //     //onColumnClick: this._onColumnClick,
+  //     // onRender: (item: IDocument) => {
+  //     //   return <img src={item.iconName} className={classNames.fileIconImg} alt={item.fileType + ' file icon'} />;
+  //     // }
+  //   },
+  //   {
+  //     key: 'column2',
+  //     name: 'Name',
+  //     fieldName: 'Title',
+  //     minWidth: 210,
+  //     maxWidth: 350,
+  //     isRowHeader: true,
+  //     isResizable: true,
+  //     isSorted: true,
+  //     isSortedDescending: false,
+  //     sortAscendingAriaLabel: 'Sorted A to Z',
+  //     sortDescendingAriaLabel: 'Sorted Z to A',
+  //     // onColumnClick: this._onColumnClick,
+  //     data: 'string',
+  //     isPadded: true
+  //   }
+  // ];
 
   constructor(props: ISinglePartDemoProps) {
     super(props);
