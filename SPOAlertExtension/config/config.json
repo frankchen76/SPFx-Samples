@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "spo-alert-application-customizer": {
+      "components": [
+        {
+          "entrypoint": "./lib/extensions/spoAlert/SpoAlertApplicationCustomizer.js",
+          "manifest": "./src/extensions/spoAlert/SpoAlertApplicationCustomizer.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "SpoAlertApplicationCustomizerStrings": "lib/extensions/spoAlert/loc/{locale}.js"
+  }
+}

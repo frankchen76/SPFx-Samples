@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <CustomAction
+        Title="SpoAlert"
+        Location="ClientSideExtension.ApplicationCustomizer"
+        ClientSideComponentId="b7fab259-d236-4b60-aa8e-5a1424288633"
+        ClientSideComponentProperties="{&quot;testMessage&quot;:&quot;Test message&quot;}">
+    </CustomAction>
+</Elements>
