@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ClientSideComponentInstance
+        Title="ClassificationHeader"
+        Location="ClientSideExtension.ApplicationCustomizer"
+        ComponentId="a7ae9e9d-3ca7-4c27-b89e-46d7039fdc7b"
+        Properties="{&quot;testMessage&quot;:&quot;Test message&quot;}"
+        HostProperties="{&quot;preAllocatedApplicationCustomizerTopHeight&quot;:&quot;30&quot;}">
+    </ClientSideComponentInstance>
+</Elements>

@@ -1,0 +1,31 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/core-build/serve.schema.json",
+  "port": 4321,
+  "https": true,
+  "serveConfigurations": {
+    "default": {
+      "pageUrl": "https://m365x725618.sharepoint.com/sites/SchwabKMDev/SitePages/Forms/ByAuthor.aspx",
+      "customActions": {
+        "7f1fc3ae-f998-4788-94e9-7de5c8372c2f": {
+          "location": "ClientSideExtension.ListViewCommandSet.CommandBar",
+          "properties": {
+            "sampleTextOne": "One item is selected in the list",
+            "sampleTextTwo": "This command is always visible."
+          }
+        }
+      }
+    },
+    "copySitePage": {
+      "pageUrl": "https://m365x725618.sharepoint.com/sites/SchwabKMDev/SitePages/Forms/ByAuthor.aspx",
+      "customActions": {
+        "7f1fc3ae-f998-4788-94e9-7de5c8372c2f": {
+          "location": "ClientSideExtension.ListViewCommandSet.CommandBar",
+          "properties": {
+            "sampleTextOne": "One item is selected in the list",
+            "sampleTextTwo": "This command is always visible."
+          }
+        }
+      }
+    }
+  }
+}
