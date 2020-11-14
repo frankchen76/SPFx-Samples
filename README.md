@@ -14,3 +14,4 @@ This repo contains SPFx samples.
 | [FluentUIDemo](./FluentUIDemo/readme.md)                             | SPFx web part Fluent UI sample                                                   |
 | [SitePageCopier](./SitePageCopier/SPO/readme.md)                     | SPFx extension to copy site pages to different site collections                  |
 | [SPOClassificationExtension](./SPOClassificationExtension/readme.md) | SPFx extension to show classification based on site collection sensitivity label |
+| [GlobalNavigation](./GlobalNavigation/readme.md)                     | SPFx extension to display a global navigation based on a list                    |

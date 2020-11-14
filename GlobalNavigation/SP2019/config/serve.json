@@ -1,0 +1,29 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/core-build/serve.schema.json",
+  "port": 4321,
+  "https": true,
+  "serveConfigurations": {
+    "default": {
+      "pageUrl": "https://dev.sp2019.ezcode.org/sites/HYCHHC-Dev",
+      "customActions": {
+        "65a1351c-8ebf-473c-a828-d866a440ad75": {
+          "location": "ClientSideExtension.ApplicationCustomizer",
+          "properties": {
+            "testMessage": "Test message"
+          }
+        }
+      }
+    },
+    "spfxGlobalNavigation": {
+      "pageUrl": "https://dev.sp2019.ezcode.org/sites/HYCHHC-Dev",
+      "customActions": {
+        "65a1351c-8ebf-473c-a828-d866a440ad75": {
+          "location": "ClientSideExtension.ApplicationCustomizer",
+          "properties": {
+            "testMessage": "Test message"
+          }
+        }
+      }
+    }
+  }
+}
