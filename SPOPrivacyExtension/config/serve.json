@@ -4,7 +4,7 @@
   "https": true,
   "serveConfigurations": {
     "default": {
-      "pageUrl": "https://m365x725618.sharepoint.com/sites/SPFxWorkshop-Dev",
+      "pageUrl": "https://m365x725618.sharepoint.com/sites/FrankTeam1",
       "customActions": {
         "a7ae9e9d-3ca7-4c27-b89e-46d7039fdc7b": {
           "location": "ClientSideExtension.ApplicationCustomizer",
@@ -15,7 +15,7 @@
       }
     },
     "classificationHeader": {
-      "pageUrl": "https://m365x725618.sharepoint.com/sites/SPFxWorkshop-Dev",
+      "pageUrl": "https://m365x725618.sharepoint.com/sites/FrankTeam1",
       "customActions": {
         "a7ae9e9d-3ca7-4c27-b89e-46d7039fdc7b": {
           "location": "ClientSideExtension.ApplicationCustomizer",

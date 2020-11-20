@@ -4,7 +4,6 @@
         Title="ClassificationHeader"
         Location="ClientSideExtension.ApplicationCustomizer"
         ClientSideComponentId="a7ae9e9d-3ca7-4c27-b89e-46d7039fdc7b"
-        ClientSideComponentProperties="{&quot;testMessage&quot;:&quot;Test message&quot;}"
-        HostProperties="{&quot;preAllocatedApplicationCustomizerTopHeight&quot;:&quot;30&quot;}">
+        ClientSideComponentProperties="{&quot;testMessage&quot;:&quot;Test message&quot;}">
     </CustomAction>
 </Elements>

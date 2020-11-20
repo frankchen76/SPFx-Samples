@@ -1,12 +1,22 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
   "solution": {
-    "name": "ClassificationHeader",
+    "name": "PrivacyHeader",
     "id": "9d7f1ac7-4d01-423a-909c-da0a9c2844a2",
     "version": "1.0.0.0",
     "includeClientSideAssets": true,
     "skipFeatureDeployment": false,
     "isDomainIsolated": false,
+    "webApiPermissionRequests": [
+      {
+        "resource": "Microsoft Graph",
+        "scope": "User.Read.All"
+      },
+      {
+        "resource": "Microsoft Graph",
+        "scope": "Group.Read.All"
+      }
+    ],
     "developer": {
       "name": "",
       "websiteUrl": "",
@@ -30,6 +40,6 @@
     ]
   },
   "paths": {
-    "zippedPackage": "solution/classification-header.sppkg"
+    "zippedPackage": "solution/privacy-header.sppkg"
   }
 }
