@@ -54,9 +54,7 @@ export class SPOPrivacyService implements IPrivacyService {
     let response = await (await this.context.spHttpClient.get(url, SPHttpClient.configurations.v1)).json();
     const siteId = response['GroupId'];
 
-    if (siteId == "00000000-0000-0000-0000-000000000000") {
-      //communication site
-    } else {
+    if (siteId != "00000000-0000-0000-0000-000000000000") {
       //Team Site
       //Sleep as Privacy might not be able to update on time.
       await this.sleep(delay);
