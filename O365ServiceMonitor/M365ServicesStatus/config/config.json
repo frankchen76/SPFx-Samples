@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "m-365-services-status-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/m365ServicesStatus/M365ServicesStatusWebPart.js",
+          "manifest": "./src/webparts/m365ServicesStatus/M365ServicesStatusWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "M365ServicesStatusWebPartStrings": "lib/webparts/m365ServicesStatus/loc/{locale}.js"
+  }
+}
