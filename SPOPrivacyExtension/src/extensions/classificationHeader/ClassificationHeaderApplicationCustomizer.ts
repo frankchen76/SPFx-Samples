@@ -19,7 +19,7 @@ const LOG_SOURCE: string = 'ClassificationHeaderApplicationCustomizer';
  */
 export interface IClassificationHeaderApplicationCustomizerProperties {
   // This is an example; replace with your own property
-  testMessage: string;
+  message: string;
 }
 
 /** A Custom Action which can be run during execution of a Client Side Application */
@@ -32,7 +32,7 @@ export default class ClassificationHeaderApplicationCustomizer
   public onInit(): Promise<void> {
     Log.info(LOG_SOURCE, `Initialized ${strings.Title}`);
 
-    let message: string = this.properties.testMessage;
+    let message: string = this.properties.message;
     if (!message) {
       message = '(No properties were provided.)';
     }
@@ -68,7 +68,8 @@ export default class ClassificationHeaderApplicationCustomizer
       const element = React.createElement(
         NotificationHeader,
         {
-          context: this.context
+          context: this.context,
+          message: this.properties.message
         }
       );
 

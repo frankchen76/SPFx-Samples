@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Elements xmlns="http://schemas.microsoft.com/sharepoint/">
     <ClientSideComponentInstance
-        Title="ClassificationHeader"
+        Title="PrivacyHeader"
         Location="ClientSideExtension.ApplicationCustomizer"
         ComponentId="a7ae9e9d-3ca7-4c27-b89e-46d7039fdc7b"
-        Properties="{&quot;testMessage&quot;:&quot;Test message&quot;}">
+        Properties="{&quot;message&quot;:&quot;&lt;b&gt;Please be aware&lt;/b&gt; the data sensitivity field has been modified from Private to Public.  This allows all users in the Guardian environment to, at minimum read any file in the folder.  If you have sensitive data (i.e. PII, PHI, PFI, restricted) in any of these files you are in violation of corporate policy, If you require this folder to remain Public, please remove immediately. Otherwise revert the disposition from Public back to Private. Please note that Private will allow members of your group to gain or maintain access.&quot;}">
     </ClientSideComponentInstance>
 </Elements>

@@ -16,6 +16,7 @@ import {
 
 export interface INotificationHeaderProps {
   context: ApplicationCustomizerContext;
+  message: string;
 }
 
 interface INotificationHeaderState {
