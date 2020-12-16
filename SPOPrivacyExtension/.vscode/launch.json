@@ -25,7 +25,7 @@
       "name": "Hosted workbench",
       "type": "chrome",
       "request": "launch",
-      "url": "https://m365x725618.sharepoint.com/sites/FrankTeam1?debugManifestsFile=https%3A%2F%2Flocalhost%3A4321%2Ftemp%2Fmanifests.js&loadSPFX=true&customActions=%7B%22a7ae9e9d-3ca7-4c27-b89e-46d7039fdc7b%22%3A%7B%22location%22%3A%22ClientSideExtension.ApplicationCustomizer%22%2C%22properties%22%3A%7B%22testMessage%22%3A%22Test+message%22%7D%7D%7D",
+      "url": "https://m365x725618.sharepoint.com/sites/FrankTeam1?debugManifestsFile=https%3A%2F%2Flocalhost%3A4321%2Ftemp%2Fmanifests.js&loadSPFX=true&customActions=%7B%22a7ae9e9d-3ca7-4c27-b89e-46d7039fdc7b%22%3A%7B%22location%22%3A%22ClientSideExtension.ApplicationCustomizer%22%2C%22properties%22%3A%7B%22message%22%3A%22Please+be+aware+that+this+site+is+Public.+Please+note+that+sensitive+personal+information+%28i.e.+PII%2C+PHI%2C+PFI%2C+restricted%29+in+any+files+should+NOT+be+stored+on+the+site+based+on+the+corporate+%3Cem%3E%E2%80%9C%3Ca+title%3D%5C%22Information+classification+policy%5C%22+href%3D%5C%22https%3A%2F%2Fwww.bing.com%5C%22+target%3D%5C%22_blank%5C%22+rel%3D%5C%22noopener%5C%22%3EInformation+classification+policy%3C%2Fa%3E%3C%2Fem%3E%E2%80%9D.+If+you+require+this+folder+to+remain+Public%2C+please+remove+any+sensitive+data+immediately.%C2%A0+Otherwise%2C+please+make+this+Sharepoint+site+%E2%80%9CPrivate%E2%80%9D.+%C2%A0This+will+allow+only+members+with+authorized+access+to+the+site+will+be+able+to+use+the+site.%22%7D%7D%7D",
       "webRoot": "${workspaceRoot}",
       "sourceMaps": true,
       "sourceMapPathOverrides": {

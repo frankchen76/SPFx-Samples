@@ -9,7 +9,7 @@
         "a7ae9e9d-3ca7-4c27-b89e-46d7039fdc7b": {
           "location": "ClientSideExtension.ApplicationCustomizer",
           "properties": {
-            "testMessage": "Test message"
+            "message": "Please be aware that this site is Public. Please note that sensitive personal information (i.e. PII, PHI, PFI, restricted) in any files should NOT be stored on the site based on the corporate <em>“<a title=\"Information classification policy\" href=\"https:\/\/www.bing.com\" target=\"_blank\" rel=\"noopener\">Information classification policy<\/a><\/em>”. If you require this folder to remain Public, please remove any sensitive data immediately.  Otherwise, please make this Sharepoint site “Private”.  This will allow only members with authorized access to the site will be able to use the site."
           }
         }
       }
@@ -20,7 +20,7 @@
         "a7ae9e9d-3ca7-4c27-b89e-46d7039fdc7b": {
           "location": "ClientSideExtension.ApplicationCustomizer",
           "properties": {
-            "testMessage": "Test message"
+            "message": "Please be aware that this site is Public. Please note that sensitive personal information (i.e. PII, PHI, PFI, restricted) in any files should NOT be stored on the site based on the corporate <em>“<a title=\"Information classification policy\" href=\"https:\/\/www.bing.com\" target=\"_blank\" rel=\"noopener\">Information classification policy<\/a><\/em>”. If you require this folder to remain Public, please remove any sensitive data immediately.  Otherwise, please make this Sharepoint site “Private”.  This will allow only members with authorized access to the site will be able to use the site."
           }
         }
       }

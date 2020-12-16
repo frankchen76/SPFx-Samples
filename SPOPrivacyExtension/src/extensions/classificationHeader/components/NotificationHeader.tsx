@@ -75,20 +75,21 @@ export class NotificationHeader extends React.Component<INotificationHeaderProps
     const messageBarStyle: IStyleFunctionOrObject<IMessageBarStyleProps, IMessageBarStyles> = {
       text: { fontSize: 14 }
     };
+    const htmlContent = { __html: this.props.message };
 
     return (
       <Stack horizontal={false}>
         {this.state.showNotification &&
           <MessageBar
-            actions={
-              <div>
-                <MessageBarButton onClick={this.onDismissHandler}>Acknowledge</MessageBarButton>
-              </div>
-            }
+            // actions={
+            //   <div>
+            //     <MessageBarButton onClick={this.onDismissHandler}>Acknowledge</MessageBarButton>
+            //   </div>
+            // }
             messageBarType={MessageBarType.warning}
             styles={messageBarStyle}
             isMultiline={true}
-          ><b>Please be aware</b> the data sensitivity field has been modified from Private to Public.  This allows all users in the Guardian environment to, at minimum read any file in the folder.  If you have sensitive data (i.e. PII, PHI, PFI, restricted) in any of these files you are in violation of corporate policy, If you require this folder to remain Public, please remove immediately. Otherwise revert the disposition from Public back to Private. Please note that Private will allow members of your group to gain or maintain access.
+          ><div dangerouslySetInnerHTML={htmlContent}></div>
           </MessageBar>
         }
       </Stack>

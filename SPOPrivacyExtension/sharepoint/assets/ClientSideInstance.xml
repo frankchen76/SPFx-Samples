@@ -4,6 +4,6 @@
         Title="PrivacyHeader"
         Location="ClientSideExtension.ApplicationCustomizer"
         ComponentId="a7ae9e9d-3ca7-4c27-b89e-46d7039fdc7b"
-        Properties="{&quot;message&quot;:&quot;&lt;b&gt;Please be aware&lt;/b&gt; the data sensitivity field has been modified from Private to Public.  This allows all users in the Guardian environment to, at minimum read any file in the folder.  If you have sensitive data (i.e. PII, PHI, PFI, restricted) in any of these files you are in violation of corporate policy, If you require this folder to remain Public, please remove immediately. Otherwise revert the disposition from Public back to Private. Please note that Private will allow members of your group to gain or maintain access.&quot;}">
+        Properties="{&quot;message&quot;:&quot;Please be aware that this site is Public. Please note that sensitive personal information (i.e. PII, PHI, PFI, restricted) in any files should NOT be stored on the site based on the corporate &lt;em&gt;&amp;ldquo;&lt;a title=\&quot;Information classification policy\&quot; href=\&quot;https://www.google.com\&quot; target=\&quot;_blank\&quot;&gt;Information classification policy&lt;/a&gt;&lt;/em&gt;&amp;rdquo;. If you require this folder to remain Public, please remove any sensitive data immediately.&amp;nbsp; Otherwise, please make this SharePoint site &amp;ldquo;Private&amp;rdquo;. &amp;nbsp;This will allow only members with authorized access to the site will be able to use the site.&quot;}">
     </ClientSideComponentInstance>
 </Elements>
