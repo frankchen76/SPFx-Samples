@@ -1,7 +1,7 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
   "solution": {
-    "name": "m-365-services-status-client-side-solution",
+    "name": "M365ServiceStatus",
     "id": "2c2a5b5c-806e-4431-a977-0ca53165608c",
     "version": "1.0.0.0",
     "includeClientSideAssets": true,
