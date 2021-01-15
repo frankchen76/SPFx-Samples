@@ -1,0 +1,12 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "sp-2019-hello-world-client-side-solution",
+    "id": "ad7f3dce-b3fa-4c4c-b5bc-235460889a68",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true
+  },
+  "paths": {
+    "zippedPackage": "solution/sp-2019-hello-world.sppkg"
+  }
+}
