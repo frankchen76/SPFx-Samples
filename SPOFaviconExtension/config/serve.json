@@ -9,7 +9,7 @@
         "5e9efa3a-916a-48a5-af23-4c7d3fa0007d": {
           "location": "ClientSideExtension.ApplicationCustomizer",
           "properties": {
-            "testMessage": "Test message"
+            "faviconUrl": "/sites/ContosoAssets/OrgAssets/favicon.ico"
           }
         }
       }
@@ -20,7 +20,7 @@
         "5e9efa3a-916a-48a5-af23-4c7d3fa0007d": {
           "location": "ClientSideExtension.ApplicationCustomizer",
           "properties": {
-            "testMessage": "Test message"
+            "faviconUrl": "/sites/ContosoAssets/OrgAssets/favicon.ico"
           }
         }
       }

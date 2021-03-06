@@ -1,7 +1,7 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
   "solution": {
-    "name": "sp-fx-fav-icon-client-side-solution",
+    "name": "FaviconExtension",
     "id": "a49467dc-dfe6-44a5-afb4-3963090f0bcf",
     "version": "1.0.0.0",
     "includeClientSideAssets": true,
@@ -29,6 +29,6 @@
     ]
   },
   "paths": {
-    "zippedPackage": "solution/sp-fx-fav-icon.sppkg"
+    "zippedPackage": "solution/faviconextension.sppkg"
   }
 }
