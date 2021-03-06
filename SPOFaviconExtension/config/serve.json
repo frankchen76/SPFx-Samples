@@ -1,0 +1,29 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/core-build/serve.schema.json",
+  "port": 4321,
+  "https": true,
+  "serveConfigurations": {
+    "default": {
+      "pageUrl": "https://m365x725618.sharepoint.com/sites/SPFxWorkshop-Dev",
+      "customActions": {
+        "5e9efa3a-916a-48a5-af23-4c7d3fa0007d": {
+          "location": "ClientSideExtension.ApplicationCustomizer",
+          "properties": {
+            "testMessage": "Test message"
+          }
+        }
+      }
+    },
+    "faviconExtension": {
+      "pageUrl": "https://m365x725618.sharepoint.com/sites/SPFxWorkshop-Dev",
+      "customActions": {
+        "5e9efa3a-916a-48a5-af23-4c7d3fa0007d": {
+          "location": "ClientSideExtension.ApplicationCustomizer",
+          "properties": {
+            "testMessage": "Test message"
+          }
+        }
+      }
+    }
+  }
+}

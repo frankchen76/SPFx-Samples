@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "header-appinsight-application-customizer": {
+      "components": [
+        {
+          "entrypoint": "./lib/extensions/headerAppinsight/HeaderAppinsightApplicationCustomizer.js",
+          "manifest": "./src/extensions/headerAppinsight/HeaderAppinsightApplicationCustomizer.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "HeaderAppinsightApplicationCustomizerStrings": "lib/extensions/headerAppinsight/loc/{locale}.js"
+  }
+}

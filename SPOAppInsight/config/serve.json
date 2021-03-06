@@ -1,0 +1,29 @@
+{
+    "$schema": "https://developer.microsoft.com/json-schemas/core-build/serve.schema.json",
+    "port": 4321,
+    "https": true,
+    "serveConfigurations": {
+        "default": {
+            "pageUrl": "https://m365x725618.sharepoint.com/sites/SPFxWorkshop-Demo/SitePages/AppInsightTest.aspx",
+            "customActions": {
+                "271a00a0-4376-4181-9ec4-58a43ebff1b0": {
+                    "location": "ClientSideExtension.ApplicationCustomizer",
+                    "properties": {
+                        "testMessage": "Test message"
+                    }
+                }
+            }
+        },
+        "headerAppinsight": {
+            "pageUrl": "https://m365x725618.sharepoint.com/sites/SPFxWorkshop-Demo/SitePages/AppInsightTest.aspx",
+            "customActions": {
+                "271a00a0-4376-4181-9ec4-58a43ebff1b0": {
+                    "location": "ClientSideExtension.ApplicationCustomizer",
+                    "properties": {
+                        "testMessage": "Test message"
+                    }
+                }
+            }
+        }
+    }
+}
