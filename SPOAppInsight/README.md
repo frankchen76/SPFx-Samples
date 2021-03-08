@@ -2,6 +2,15 @@
 
 This is a sample SPFx extension to use Azure Application Insight for SPO telemetry. replace the instrumentation key in the code.
 
+### Testing
+For testing, create appinsightkey.json under root folder to include the following content
+```JSON
+{
+    "key": "[ApplicationInsightKey]"
+}
+
+```
+
 ### Building the code
 
 ```bash
