@@ -43,7 +43,7 @@
             "name": "Hosted Extension",
             "type": "chrome",
             "request": "launch",
-            "url": "https://m365x725618.sharepoint.com/sites/SPFxWorkshop-Demo/SitePages/AppInsightTest.aspx?debugManifestsFile=https%3A%2F%2Flocalhost%3A4321%2Ftemp%2Fmanifests.js&loadSPFX=true&customActions=%7B%22271a00a0-4376-4181-9ec4-58a43ebff1b0%22%3A%7B%22location%22%3A%22ClientSideExtension.ApplicationCustomizer%22%2C%22properties%22%3A%7B%22testMessage%22%3A%22Test+message%22%7D%7D%7D",
+            "url": "https://m365x725618.sharepoint.com/sites/SPFxWorkshop-Demo/SitePages/AppInsightTest.aspx?debugManifestsFile=https%3A%2F%2Flocalhost%3A4321%2Ftemp%2Fmanifests.js&loadSPFX=true&customActions=%7B%22271a00a0-4376-4181-9ec4-58a43ebff1b0%22%3A%7B%22location%22%3A%22ClientSideExtension.ApplicationCustomizer%22%2C%22properties%22%3A%7B%22appInsightsKey%22%3A%22%22%7D%7D%7D",
             "webRoot": "${workspaceRoot}",
             "sourceMaps": true,
             "sourceMapPathOverrides": {
@@ -52,9 +52,11 @@
                 "webpack:///../../../../src/*": "${webRoot}/src/*",
                 "webpack:///../../../../../src/*": "${webRoot}/src/*"
             },
+            "userDataDir": "C:\\Users\\tachen\\AppData\\Local\\Google\\Chrome\\User Data",
             "runtimeArgs": [
                 "--remote-debugging-port=9222",
-                "-incognito"
+                "--harmony",
+                "--profile-directory=Profile 1"
             ]
         }
     ]

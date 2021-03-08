@@ -4,6 +4,6 @@
         Title="HeaderAppinsight"
         Location="ClientSideExtension.ApplicationCustomizer"
         ComponentId="271a00a0-4376-4181-9ec4-58a43ebff1b0"
-        Properties="{&quot;testMessage&quot;:&quot;Test message&quot;}">
+        Properties="{&quot;appInsightsKey&quot;:&quot;Test message&quot;}">
     </ClientSideComponentInstance>
 </Elements>

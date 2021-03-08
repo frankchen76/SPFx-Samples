@@ -9,7 +9,7 @@
                 "271a00a0-4376-4181-9ec4-58a43ebff1b0": {
                     "location": "ClientSideExtension.ApplicationCustomizer",
                     "properties": {
-                        "testMessage": "Test message"
+                        "appInsightsKey": ""
                     }
                 }
             }
@@ -20,7 +20,7 @@
                 "271a00a0-4376-4181-9ec4-58a43ebff1b0": {
                     "location": "ClientSideExtension.ApplicationCustomizer",
                     "properties": {
-                        "testMessage": "Test message"
+                        "appInsightsKey": ""
                     }
                 }
             }
