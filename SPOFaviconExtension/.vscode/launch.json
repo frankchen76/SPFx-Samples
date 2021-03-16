@@ -40,6 +40,27 @@
         "--harmony",
         "--profile-directory=Profile 1"
       ]
+    },
+    {
+      "name": "Hosted workbench-subsite",
+      "type": "chrome",
+      "request": "launch",
+      "url": "https://m365x725618.sharepoint.com/sites/FrankCommunication1/Sub1?debugManifestsFile=https%3A%2F%2Flocalhost%3A4321%2Ftemp%2Fmanifests.js&loadSPFX=true&customActions=%7B%225e9efa3a-916a-48a5-af23-4c7d3fa0007d%22%3A%7B%22location%22%3A%22ClientSideExtension.ApplicationCustomizer%22%2C%22properties%22%3A%7B%22faviconUrl%22%3A%22%2Fsites%2FContosoAssets%2FOrgAssets%2Ffavicon.ico%22%7D%7D%7D",
+      "webRoot": "${workspaceRoot}",
+      "sourceMaps": true,
+      "sourceMapPathOverrides": {
+        "webpack:///.././src/*": "${webRoot}/src/*",
+        "webpack:///../../../src/*": "${webRoot}/src/*",
+        "webpack:///../../../../src/*": "${webRoot}/src/*",
+        "webpack:///../../../../../src/*": "${webRoot}/src/*"
+      },
+      "userDataDir": "C:\\Users\\tachen\\AppData\\Local\\Google\\Chrome\\User Data",
+      "runtimeArgs": [
+        "--remote-debugging-port=9222",
+        "--harmony",
+        "--profile-directory=Profile 1"
+      ]
     }
+
   ]
 }
