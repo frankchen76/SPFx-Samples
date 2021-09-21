@@ -4,6 +4,6 @@
         Title="FaviconExtension"
         Location="ClientSideExtension.ApplicationCustomizer"
         ClientSideComponentId="5e9efa3a-916a-48a5-af23-4c7d3fa0007d"
-        ClientSideComponentProperties="{&quot;faviconUrl&quot;:&quot;/sites/ContosoAssets/OrgAssets/favicon.ico&quot;}">
+        ClientSideComponentProperties="{&quot;faviconUrl&quot;:&quot;/SiteAssets/favicon.ico&quot;,&quot;timeout&quot;:100}">
     </CustomAction>
 </Elements>

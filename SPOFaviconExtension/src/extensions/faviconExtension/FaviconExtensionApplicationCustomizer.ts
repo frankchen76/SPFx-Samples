@@ -17,6 +17,7 @@ const LOG_SOURCE: string = 'FaviconExtensionApplicationCustomizer';
 export interface IFaviconExtensionApplicationCustomizerProperties {
   // This is an example; replace with your own property
   faviconUrl: string;
+  timeout: number;
 }
 
 /** A Custom Action which can be run during execution of a Client Side Application */
@@ -28,7 +29,7 @@ export default class FaviconExtensionApplicationCustomizer
     Log.info(LOG_SOURCE, `Initialized ${strings.Title}`);
 
     // Dialog.alert(`Hello from ${strings.Title}:\n\n${message}`);
-    this._intervalHandler = setInterval(this.timerHandler.bind(this), 100, null);
+    this._intervalHandler = setInterval(this.timerHandler.bind(this), this.properties.timeout, null);
 
     return Promise.resolve();
   }
@@ -38,7 +39,8 @@ export default class FaviconExtensionApplicationCustomizer
     if (elemFavicon) {
       clearInterval(this._intervalHandler);
       if (elemFavicon.hasAttribute("href")) {
-        elemFavicon.setAttribute("href", "/sites/ContosoAssets/OrgAssets/favicon.ico");
+        //elemFavicon.setAttribute("href", "/SiteAssets/favicon.ico");//sites/ContosoAssets/
+        elemFavicon.setAttribute("href", this.properties.faviconUrl);
       }
     }
   }
