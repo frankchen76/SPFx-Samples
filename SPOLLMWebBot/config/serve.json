@@ -1,0 +1,51 @@
+{
+    "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/spfx-serve.schema.json",
+    "port": 4321,
+    "https": true,
+    "serveConfigurations": {
+        "default": {
+            "pageUrl": "https://mngenv626552.sharepoint.com/sites/SPFx-Dev",
+            "customActions": {
+                "96093d6d-e83a-4991-a0ba-c465d9cf71ea": {
+                    "location": "ClientSideExtension.ApplicationCustomizer",
+                    "properties": {
+                        "spoSiteUrl": "[spo-sitecollection]",
+                        "spoDocLib": "[spo-documentlibrary]",
+                        "enabled": true,
+                        "selectedDocuments": [
+                            "Power Platform product licensing FAQ.docx"
+                        ],
+                        "aiServiceKey": "[azure-openai-key]",
+                        "aiServiceUrl": "[azure-openai-url]",
+                        "aiSearchUrl": "[ai-search-url]",
+                        "aiSearchIndex": "[ai-search-index]",
+                        "aiSearchConfig": "[ai-search-config]",
+                        "aiSearchKey": "[ai-search-key]"
+                    }
+                }
+            }
+        },
+        "spollmWebBot": {
+            "pageUrl": "https://mngenv626552.sharepoint.com/sites/SPFx-Dev",
+            "customActions": {
+                "96093d6d-e83a-4991-a0ba-c465d9cf71ea": {
+                    "location": "ClientSideExtension.ApplicationCustomizer",
+                    "properties": {
+                        "spoSiteUrl": "[spo-sitecollection]",
+                        "spoDocLib": "[spo-documentlibrary]",
+                        "enabled": true,
+                        "selectedDocuments": [
+                            "Power Platform product licensing FAQ.docx"
+                        ],
+                        "aiServiceKey": "[azure-openai-key]",
+                        "aiServiceUrl": "[azure-openai-url]",
+                        "aiSearchUrl": "[ai-search-url]",
+                        "aiSearchIndex": "[ai-search-index]",
+                        "aiSearchConfig": "[ai-search-config]",
+                        "aiSearchKey": "[ai-search-key]"
+                    }
+                }
+            }
+        }
+    }
+}

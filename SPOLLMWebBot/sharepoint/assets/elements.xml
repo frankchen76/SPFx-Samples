@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <CustomAction
+        Title="SpollmWebBot"
+        Location="ClientSideExtension.ApplicationCustomizer"
+        ClientSideComponentId="96093d6d-e83a-4991-a0ba-c465d9cf71ea"
+        ClientSideComponentProperties="{&quot;spoSiteUrl&quot;: &quot;[spo-sitecollection]&quot;,&quot;spoDocLib&quot;: &quot;[spo-documentlibrary]&quot;,&quot;enabled&quot;: true,&quot;selectedDocuments&quot;: [&quot;Power Platform product licensing FAQ.docx&quot;],&quot;aiServiceKey&quot;: &quot;[azure-openai-key]&quot;,&quot;aiServiceUrl&quot;: &quot;[azure-openai-url]&quot;,&quot;aiSearchUrl&quot;: &quot;[ai-search-url]&quot;,&quot;aiSearchIndex&quot;: &quot;[ai-search-index]&quot;,&quot;aiSearchConfig&quot;: &quot;[ai-search-config]&quot;,&quot;aiSearchKey&quot;: &quot;[ai-search-key]&quot;}">
+    </CustomAction>
+</Elements>

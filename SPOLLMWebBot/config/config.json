@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "spollm-web-bot-application-customizer": {
+      "components": [
+        {
+          "entrypoint": "./lib/extensions/spollmWebBot/SpollmWebBotApplicationCustomizer.js",
+          "manifest": "./src/extensions/spollmWebBot/SpollmWebBotApplicationCustomizer.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "SpollmWebBotApplicationCustomizerStrings": "lib/extensions/spollmWebBot/loc/{locale}.js"
+  }
+}

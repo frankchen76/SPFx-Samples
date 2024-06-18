@@ -1,0 +1,23 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Hosted workbench",
+            "type": "msedge",
+            "request": "launch",
+            "url": "https://mngenv626552.sharepoint.com/sites/SPFx-Dev?debugManifestsFile=https%3A%2F%2Flocalhost%3A4321%2Ftemp%2Fmanifests.js&loadSPFX=true&customActions=%7B%2296093d6d-e83a-4991-a0ba-c465d9cf71ea%22%3A%7B%22location%22%3A%22ClientSideExtension.ApplicationCustomizer%22%2C%22properties%22%3A%7B%22aiSiteUrl%22%3A%22https%3A%2F%2Fmngenv626552.sharepoint.com%2Fsites%2FAzureCognitiveSearch%22%2C%22aiDocLib%22%3A%22Documents%22%2C%22enabled%22%3Atrue%7D%7D%7D",
+            "webRoot": "${workspaceRoot}",
+            "sourceMaps": true,
+            "sourceMapPathOverrides": {
+                "webpack:///.././src/*": "${webRoot}/src/*",
+                "webpack:///../../../src/*": "${webRoot}/src/*",
+                "webpack:///../../../../src/*": "${webRoot}/src/*",
+                "webpack:///../../../../../src/*": "${webRoot}/src/*"
+            },
+            "runtimeArgs": [
+                "--remote-debugging-port=9222",
+                "-incognito"
+            ]
+        }
+    ]
+}

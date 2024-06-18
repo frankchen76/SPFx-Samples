@@ -1,0 +1,22 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "nodeVersion": "18.18.1",
+    "sdksVersions": {
+      "@microsoft/microsoft-graph-client": "3.0.2",
+      "@microsoft/teams-js": "2.12.0"
+    },
+    "version": "1.19.0",
+    "libraryName": "spollm-web-bot",
+    "libraryId": "a772bc5a-0ff7-4230-ae16-6707213d447f",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionName": "SPOLLMWebBot",
+    "solutionShortDescription": "SPOLLMWebBot description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "componentType": "extension",
+    "extensionType": "ApplicationCustomizer"
+  }
+}
