@@ -1,0 +1,37 @@
+{
+    "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/spfx-serve.schema.json",
+    "port": 4321,
+    "https": true,
+    "serveConfigurations": {
+        "default": {
+            "pageUrl": "https://m365cp128905.sharepoint.com/sites/tachen-SPFxDev/SitePages/TestBotPage.aspx",
+            "customActions": {
+                "bbcf8287-ea2d-4bb6-868f-19b9cf4b0812": {
+                    "location": "ClientSideExtension.ApplicationCustomizer",
+                    "properties": {
+                        "botURL": "[bot-url]",
+                        "customScope": "[custom-scope]",
+                        "clientID": "[client-id]",
+                        "authority": "https://login.microsoftonline.com/[tenant-name].onmicrosoft.com",
+                        "greet": true
+                    }
+                }
+            }
+        },
+        "pvaSso": {
+            "pageUrl": "https://m365cp128905.sharepoint.com/sites/tachen-SPFxDev/SitePages/TestBotPage.aspx",
+            "customActions": {
+                "bbcf8287-ea2d-4bb6-868f-19b9cf4b0812": {
+                    "location": "ClientSideExtension.ApplicationCustomizer",
+                    "properties": {
+                        "botURL": "[bot-url]",
+                        "customScope": "[custom-scope]",
+                        "clientID": "[client-id]",
+                        "authority": "https://login.microsoftonline.com/[tenant-name].onmicrosoft.com",
+                        "greet": true
+                    }
+                }
+            }
+        }
+    }
+}
